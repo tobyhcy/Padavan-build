@@ -40,7 +40,13 @@ jobs:
       - name: Clone source code
         run: |
           git clone -b chongshengB https://github.com/Yh793/rt-n56u.git /opt/rt-n56u
-
+      - name: Clone source code adg
+        run: |
+          git clone --branch "v0.104.0" --depth=1 "https://github.com/AdguardTeam/AdGuardHome" /opt/adguard
+      - name: Setup Node.js
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
       - name: set go
         run: |
           cd /opt/hostedtoolcache/go
