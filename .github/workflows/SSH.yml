@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Build Padavan"
+        description: "SSH connection"
         required: true
-        default: "build"
+        default: "GO"
   # release:
   #   types: [published]
   push:
@@ -52,11 +52,16 @@ jobs:
           cd /opt/hostedtoolcache/go
           rm -rf /opt/hostedtoolcache/go/1.14.10
           mv 1.15.3 1.14.10
+      - name: golangci-lint
+        uses: golangci/golangci-lint-action@v2
+        with:
+          # Required: the version of golangci-lint is required and must be specified without patch version: we always use the latest patch version.
+          version: v1.32.2
       - name: Update UPX
         run: |
           mkdir -p /opt/upx
           cd /opt/upx
-          wget https://github.com/upx/upx/releases/download/v3.94/upx-3.94-amd64_linux.tar.xz
+          wget https://github.com/upx/upx/releases/download/v3.93/upx-3.93-amd64_linux.tar.xz
           tar -Jxf upx*.tar.xz
           sudo cp upx*/upx /usr/bin
 
