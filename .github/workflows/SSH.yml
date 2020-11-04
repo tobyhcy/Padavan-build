@@ -40,6 +40,13 @@ jobs:
       - name: Clone source code
         run: |
           git clone -b chongshengB https://github.com/Yh793/rt-n56u.git /opt/rt-n56u
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+            node-version: '12'
+            check-latest: true
+      - run: npm install
+      - run: npm test
       - name: set go
         run: |
           cd /opt/hostedtoolcache/go
