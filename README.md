@@ -45,7 +45,7 @@ More on [ChongshengB](https://github.com/chongshengB/rt-n56u)
 
 * 当前最新版本:PSG1218_nano.20.103120.trx  最后编译时间: 2020-10-31 20:15:56  下载地址: [奶牛快传](https://cowtransfer.com/s/f298ba0e321d45)  [WeTransfer](https://we.tl/t-MZnlEwgeE7)
 
-
+* 当前最新版本:E8820V2.20.110516.trx  最后编译时间: 2020-11-05 17:25:18  下载地址: [奶牛快传](https://cowtransfer.com/s/a77acd4681b644)  [WeTransfer](https://we.tl/t-vdtleMwh0T)
 
 
 
