@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: "Build Padavan"
+        description: "SSH connection"
         required: true
-        default: "build"
+        default: "GO"
   # release:
   #   types: [published]
   push:
@@ -22,7 +22,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -39,17 +39,25 @@ jobs:
           pkg-config zlib1g-dev libgmp3-dev libmpc-dev libmpfr-dev libncurses5-dev libltdl-dev wget libc-dev-bin
       - name: Clone source code
         run: |
-          git clone -b chongshengB https://github.com/Yh793/rt-n56u.git /opt/rt-n56u
+          git clone -b chongshengB --depth=1 https://github.com/Yh793/rt-n56u.git /opt/rt-n56u
+      - name: Clone source code adg
+        run: |
+          git clone --branch "v0.104.0" --depth=1 "https://github.com/AdguardTeam/AdGuardHome" /opt/adguard
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12'
       - name: set go
         run: |
           cd /opt/hostedtoolcache/go
-          rm -rf /opt/hostedtoolcache/go/1.14.10
-          mv 1.15.3 1.14.10
+          rm -rf /opt/hostedtoolcache/go/1.14.11
+          mv 1.15.4 1.14.11
+
       - name: Update UPX
         run: |
           mkdir -p /opt/upx
           cd /opt/upx
-          wget https://github.com/upx/upx/releases/download/v3.96/upx-3.96-amd64_linux.tar.xz
+          wget https://github.com/upx/upx/releases/download/v3.93/upx-3.93-amd64_linux.tar.xz
           tar -Jxf upx*.tar.xz
           sudo cp upx*/upx /usr/bin
 

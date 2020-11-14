@@ -1,4 +1,4 @@
-# Padavan 定时编译
+# Padavan 固件编译
 
 ## 固件源
 
@@ -9,7 +9,7 @@
 ## Hanwckf Padavan
 More on [Hanwckf](https://github.com/hanwckf/rt-n56u/)
 
-* 当前最新版本:K2P_nano-5.0.20.110220.trx  最后编译时间: 2020-11-02 20:33:43  下载地址: [奶牛快传](https://cowtransfer.com/s/64684226a1d44c)  [WeTransfer](https://we.tl/t-aZ8ayr7Q0o)
+* 当前最新版本:K2P_nano-5.0.20.110316.trx  最后编译时间: 2020-11-03 16:57:56  下载地址: [奶牛快传](https://cowtransfer.com/s/ecd623dd925b40)  [WeTransfer](https://we.tl/t-xWZF1jZToq)
 
 * 当前最新版本:PSG1218.2020110122.trx  最后编译时间: 2020-11-01 22:22:09  下载地址: [奶牛快传](https://cowtransfer.com/s/b33d70302d1e49)  [WeTransfer](https://we.tl/t-YUroRb2IwF)
 
@@ -45,7 +45,7 @@ More on [ChongshengB](https://github.com/chongshengB/rt-n56u)
 
 * 当前最新版本:PSG1218_nano.20.103120.trx  最后编译时间: 2020-10-31 20:15:56  下载地址: [奶牛快传](https://cowtransfer.com/s/f298ba0e321d45)  [WeTransfer](https://we.tl/t-MZnlEwgeE7)
 
-
+* 当前最新版本:E8820V2.20.110613.trx  最后编译时间: 2020-11-06 13:51:10  下载地址: [奶牛快传](https://cowtransfer.com/s/1a44b0f6d0b740)  [WeTransfer](https://we.tl/t-9oF8uM8gFa)
 
 
 
